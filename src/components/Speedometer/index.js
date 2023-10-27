@@ -16,9 +16,8 @@ class Speedometer extends Component {
 
   onBrake = () => {
     const {speed} = this.state
-    if (speed > 0) {
-      this.setState(prevState => ({speed: prevState.speed - prevState.speed}))
-    }
+   
+    this.setState(prevState => ({speed: prevState.speed - prevState.speed}))
   }
 
   render() {

@@ -15,8 +15,6 @@ class Speedometer extends Component {
   }
 
   onBrake = () => {
-    const {speed} = this.state
-   
     this.setState(prevState => ({speed: prevState.speed - prevState.speed}))
   }
 
@@ -31,9 +29,7 @@ class Speedometer extends Component {
           src="https://assets.ccbp.in/frontend/react-js/speedometer-img.png"
           alt="speedometer"
         />
-        <h1 className="heading">
-          Speed Is <span>{speed}</span>mph
-        </h1>
+        <h1 className="speed-text">Speed is {speed}mph</h1>
         <p className="text">Min Limit is 0mph, Max Limit is 200mph</p>
         <div>
           <button
